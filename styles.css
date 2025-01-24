@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap'); /* Courier Prime for typewriter effect */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #2a0845, #6441a5, #9f5f80, #222b68); 
+    background-size: 300% 300%;
+    animation: gradient-animation 15s ease infinite;
+    color: #fff;
+    line-height: 1.6;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.logo {
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ff758c; 
+}
+
+/* About Section */
+section#about {
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 4rem;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.photo-placeholder {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.content {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h1 span {
+    font-family: 'Courier Prime', monospace;
+    font-size: 2.5rem;
+    display: inline-block;
+    border-right: 2px solid;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(30) 1s 1 normal both, blinkCaret 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 76%;
+    }
+}
+
+@keyframes blinkCaret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Projects Section */
+section#projects {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.project-card {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+section#contact {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-icons a {
+    font-size: 3rem; 
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #ff758c; 
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: right;
+    padding: .8rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: #fff;
+    font-size: .8rem;
+}
